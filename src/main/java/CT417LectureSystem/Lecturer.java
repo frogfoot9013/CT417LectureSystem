@@ -46,7 +46,7 @@ public class Lecturer extends Person {
             throw new IllegalArgumentException(Lecturer.LECTURER_ALREADY_TEACHING_ERR);
         }
         else{
-            input.addModuleLecturer(this);
+            input.getModuleLecturers().add(this);
             taughtModules.add(input);
         }
     }
@@ -57,7 +57,7 @@ public class Lecturer extends Person {
             throw new IllegalArgumentException(Lecturer.LECTURER_ALREADY_REMOVED_ERR);
         }
         else{
-            input.removeModuleLecturer(this);
+            input.getModuleLecturers().remove(this);
             taughtModules.remove(input);
         }
     }
