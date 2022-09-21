@@ -3,7 +3,7 @@ apply plugin: 'jacoco'
 apply plugin: 'maven-publish'
 
 group = 'com.github.frogfoot9013'
-version = 'v1.0.0'
+version = 'v1.0.1'
 
 repositories {
     mavenCentral()
@@ -26,8 +26,8 @@ publishing{
     publications{
         maven(MavenPublication){
             groupId = 'com.github.frogfoot9013'
-            artifactId = 'CT417Assignment1'
-            version = 'v1.0.0'
+            artifactId = 'CT417LectureSystem'
+            version = 'v1.0.1'
             
             from components.java
         }
