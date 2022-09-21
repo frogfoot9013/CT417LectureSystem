@@ -1,0 +1,10 @@
+CT417LectureSystem/Student.java
+ CT417LectureSystem.Student
+CT417LectureSystem/Person.java
+ CT417LectureSystem.Person
+CT417LectureSystem/Lecturer.java
+ CT417LectureSystem.Lecturer
+CT417LectureSystem/CourseModule.java
+ CT417LectureSystem.CourseModule
+CT417LectureSystem/CourseProgramme.java
+ CT417LectureSystem.CourseProgramme
