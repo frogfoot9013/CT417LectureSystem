@@ -3,7 +3,7 @@ apply plugin: 'jacoco'
 apply plugin: 'maven-publish'
 
 group = 'com.github.frogfoot9013'
-version = 'v1.0.2'
+version = 'v1.0.3'
 
 repositories {
     mavenCentral()
