@@ -8,7 +8,7 @@ import org.joda.time.IllegalFieldValueException;
 
 /**
  *
- * @author Admin
+ * @author Anna Hunt (18484674)
  */
 public abstract class Person { // I have created an abstract class Person for both Student and Lecturer to extend because they share a lot of common functionality
     

@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Admin
+ * @author Anna Hunt (18484674)
  */
 public class CourseModuleTest {
     /**
