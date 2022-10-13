@@ -4,13 +4,12 @@
  */
 package CT417LectureSystemTests;
 import CT417LectureSystem.CourseModule;
-import CT417LectureSystem.CourseProgramme;
-import CT417LectureSystem.Student;
 import CT417LectureSystem.Lecturer;
 import static org.junit.Assert.*;
 import java.util.ArrayList;
 import org.junit.Test;
 import org.joda.time.DateTime;
+import org.joda.time.Years;
 import org.joda.time.IllegalFieldValueException;
 
 /**
@@ -61,6 +60,110 @@ public class LecturerTest {
         }
     }
 
+    /**
+     * Test of getName method, of class Lecturer.
+     */
+    @Test
+    public void testGetNameLecturer() {
+        System.out.println("Test Lecturer class getName method");
+        Lecturer instance = new Lecturer("Joe Smith", 1980, 2, 25);
+        String expResult = "Joe Smith";
+        String result = instance.getName();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of setName method, of class Student.
+     */
+    @Test
+    public void testSetNameLecturer() {
+        System.out.println("Test Lecturer class setName method");
+        String inputAndExpectedResult = "Joe Bloggs";
+        Lecturer instance = new Lecturer("Joe Smith", 1980, 2, 25);
+        instance.setName(inputAndExpectedResult);
+        assertEquals(inputAndExpectedResult, instance.getName());
+    }
+    
+    /**
+     * Test of getAge method, of class Lecturer.
+     */
+    @Test
+    public void testGetAgeLecturer() {
+        System.out.println("Test Lecturer class getAge method");
+        Lecturer instance = new Lecturer("Joe Smith", 1980, 2, 25);
+        int expResult = Years.yearsBetween(new DateTime(1980, 2, 25, 0, 0), new DateTime()).getYears();
+        int result = instance.getAge();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of setAge method, of class Lecturer.
+     */
+    @Test
+    public void testSetAgeLecturer() {
+        System.out.println("Test Lecturer class setAge method");
+        Lecturer instance = new Lecturer("Joe Smith", 1980, 2, 25);
+        instance.setAge();
+        int expResult = Years.yearsBetween(new DateTime(1980, 2, 25, 0, 0), new DateTime()).getYears();
+        int result = instance.getAge();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of getDob method, of class Lecturer.
+     */
+    @Test
+    public void testGetDobLecturer() {
+        System.out.println("Test Lecturer class method getDob");
+        Lecturer instance = new Lecturer("Joe Smith", 1980, 2, 25);
+        DateTime expResult = new DateTime(1980, 2, 25, 0, 0);
+        DateTime result = instance.getDob();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of setDob method, of class Lecturer.
+     */
+    @Test
+    public void testSetDobLecturer() {
+        System.out.println("Test Lecturer class method setDob");
+        DateTime input = new DateTime(1979, 8, 21, 0, 0);
+        Lecturer instance = new Lecturer("Joe Smith", 1980, 2, 25);
+        instance.setDob(input);
+        assertEquals(input, instance.getDob());
+    }
+    
+    /**
+     * Test of setDob method, of class Lecturer, with impossible date passed as argument
+     */
+    @Test
+    public void testSetDobFailMalformedDateLecturer(){
+        System.out.println("Test Lecturer class method setDob Fail with Malformed Date.");
+        Lecturer instance = new Lecturer("Joe Smith", 1980, 2, 25);
+        try{
+            instance.setDob(new DateTime(1980, 2, 31, 0, 0));
+            fail("This should not be reached.");
+        }catch(IllegalFieldValueException e){
+            System.out.println(e.getMessage());
+        }
+    }
+    
+    /**
+     * Test of setDob method, of class Lecturer, with future date, and thus invalid date passed as argument
+     */
+    @Test
+    public void testSetDobFailFutureDateLecturer(){
+        System.out.println("Test Lecturer class method setDob Fail with future date.");
+        Lecturer instance = new Lecturer("Joe Smith", 1980, 2, 25);
+        try{// test for future date
+            instance.setDob(new DateTime(2100, 5, 13, 0, 0));
+            fail("This should not be reached, this should be invalid.");
+        }catch(IllegalArgumentException e){
+            System.out.println(e.getMessage());
+            assertEquals(Lecturer.FUTURE_DOB_ERR, e.getMessage());
+        }  
+    }
+    
     /**
      * Test of getLecturerId method, of class Lecturer.
      */

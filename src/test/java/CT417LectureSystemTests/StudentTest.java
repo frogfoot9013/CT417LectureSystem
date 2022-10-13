@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import org.junit.Test;
 import org.joda.time.DateTime;
+import org.joda.time.Years;
 import org.joda.time.IllegalFieldValueException;
 
 /**
@@ -91,7 +92,7 @@ public class StudentTest {
     public void testGetAge() {
         System.out.println("Test Student class getAge method");
         Student instance = new Student("Joe Smith", 2000, 7, 19);
-        int expResult = 22;
+        int expResult = Years.yearsBetween(new DateTime(2000, 7, 19, 0, 0), new DateTime()).getYears();
         int result = instance.getAge();
         assertEquals(expResult, result);
     }
@@ -104,7 +105,7 @@ public class StudentTest {
         System.out.println("Test Student class setAge method");
         Student instance = new Student("Joe Smith", 2000, 9, 14);
         instance.setAge();
-        int expResult = 22;
+        int expResult = Years.yearsBetween(new DateTime(2000, 9, 14, 0, 0), new DateTime()).getYears();
         int result = instance.getAge();
         assertEquals(expResult, result);
     }
@@ -175,18 +176,6 @@ public class StudentTest {
         String result = instance.getStudentId();
         assertEquals(expResult, result);
     }
-
-    /**
-     * Test of setStudenId method, of class Student.
-     */
-    /**@Test
-    public void testSetStudentId() {
-        System.out.println("Test Student class method setStudentId");
-        int input = 913131;
-        Student instance = new Student("Joe Smith", 2000, 9, 14);
-        instance.setStudentId(input);
-        assertEquals(input, instance.getStudentId());
-    } */
 
     /**
      * Test of getUsername method, of class Student.

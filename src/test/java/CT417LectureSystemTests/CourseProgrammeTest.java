@@ -9,10 +9,6 @@ import CT417LectureSystem.Student;
 import java.util.ArrayList;
 import org.joda.time.DateTime;
 import org.joda.time.IllegalFieldValueException;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

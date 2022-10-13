@@ -8,7 +8,6 @@ import CT417LectureSystem.CourseProgramme;
 import CT417LectureSystem.Lecturer;
 import CT417LectureSystem.Student;
 import java.util.ArrayList;
-
 import org.junit.Test;
 import static org.junit.Assert.*;
 

@@ -3,7 +3,7 @@ apply plugin: 'jacoco'
 apply plugin: 'maven-publish'
 
 group = 'com.github.frogfoot9013'
-version = 'v1.0.1'
+version = 'v1.0.2'
 
 repositories {
     mavenCentral()
@@ -12,7 +12,6 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/org.terasoluna.gfw/terasoluna-gfw-jodatime
     implementation 'org.terasoluna.gfw:terasoluna-gfw-jodatime:5.7.0.RELEASE'
     testImplementation     'junit:junit:4.13'
     implementation 'com.github.jitpack:gradle-simple:1.0'

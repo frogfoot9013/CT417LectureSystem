@@ -11,10 +11,6 @@ import org.joda.time.IllegalFieldValueException;
  * @author Anna Hunt (18484674)
  */
 
-/**
- *
- * @author Admin
- */
 public class Lecturer extends Person {
     
     private static int idCounter = 0;
