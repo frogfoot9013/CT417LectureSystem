@@ -36,7 +36,7 @@ public class LecturerTest {
      */
     @Test
     public void testLecturerConstructorFailMalformedDate(){
-        System.out.println("Test Student Constructor Fail with malformed date.");
+        System.out.println("Test Lecturer Constructor Fail with malformed date.");
         try{
             Lecturer instance = new Lecturer("Joe Smith", 2001, 2, 29);
             fail("This should not be reached, this should be invalid.");
@@ -50,7 +50,7 @@ public class LecturerTest {
      */
     @Test
     public void testLecturerConstructorFailFutureDate(){
-        System.out.println("Test Student Constructor Fail with future date.");
+        System.out.println("Test Lecturer Constructor Fail with future date.");
         try{
             Lecturer instance = new Lecturer("Joe Smith", 2100, 3, 20);
             fail("This should not be reached, this should be invalid.");
@@ -73,7 +73,7 @@ public class LecturerTest {
     }
 
     /**
-     * Test of setName method, of class Student.
+     * Test of setName method, of class Lecturer.
      */
     @Test
     public void testSetNameLecturer() {
@@ -171,7 +171,7 @@ public class LecturerTest {
     public void testGetLecturerId() {
         System.out.println("Test Lecturer class method getLecturerId");
         Lecturer instance = new Lecturer("Joe Smith", 1980, 9, 14);
-        String expResult = "L" + (Lecturer.getIdCounter()-1); //because ID counter increments each time used, and tests are run in an irregular order, this is necesary to predict what ID number a student will be assigned
+        String expResult = "L" + (Lecturer.getIdCounter()-1); //because ID counter increments each time used, and tests are run in an irregular order, this is necesary to predict the ID value
         String result = instance.getLecturerId();
         assertEquals(expResult, result);
     }
